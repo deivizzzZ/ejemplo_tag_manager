@@ -19,7 +19,6 @@ function sendForm() {
 
 document.querySelectorAll("a").forEach(link => {
     link.addEventListener('click', () => {
-        // AQUÍ IRÁ LA LLAMADA A ANALYTICS
-        // gtag('event', 'link_clicked', {'link_visited': link.innerText});
+        dataLayer.push({ 'link_visited': link.innerText });
     });
 });

@@ -2,6 +2,9 @@ let clicksCounter = 0;
 function increaseCounter() {
     clicksCounter++;
     document.getElementById("clicks-number").value = clicksCounter;
+}
+
+function sendClicks() {
     dataLayer.push({
         // Estos datos se envían mediante un activador de clic en GTM
         'clicks_number': document.getElementById("clicks-number").value

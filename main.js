@@ -1,9 +1,3 @@
-/*
-Hay que investigar qué parámetros podemos sacar
-con las variables predefinidas de GTM
-para tocar código lo menos posible
-*/
-
 let clicksCounter = 0;
 function increaseCounter() {
     clicksCounter++;
@@ -11,7 +5,7 @@ function increaseCounter() {
 }
 function sendClicks() {
     dataLayer.push({
-        // Estos datos se envían mediante
+        // Estos datos se envían mediante un activador de clic en GTM
         'clicks_number': document.getElementById("clicks-number").value
     });
 }
@@ -21,7 +15,6 @@ function sendForm() {
     const lname = document.getElementById("lname").value;
     dataLayer.push({
         // Estos datos se envían mediante el activador 'envío de formulario' en GTM
-
         'form_name': `${fname} ${lname}`
     });
 }

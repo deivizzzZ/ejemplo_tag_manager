@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
     <script>
+        // Este evento se producirá cada vez que se carge la página
         window.dataLayer = window.dataLayer || [];
         
         dataLayer.push({
@@ -39,7 +40,7 @@
                 <button onclick="increaseCounter()">Haz click</button>
                 <label for="clicks-number">Número de clicks:</label>
                 <input type="text" id="clicks-number">
-                <button onclick="sendClicks()">Enviar Clicks</button>
+                <button class="clicks-button" onclick="sendClicks()">Enviar Clicks</button>
             </div>
         </div>
         <div class="data-sent">
@@ -48,7 +49,7 @@
                 <input type="text" id="fname" name="fname"><br>
                 <label for="lname">Apellido:</label>
                 <input type="text" id="lname" name="lname"><br>
-                <button type="submit" onclick="sendForm()">Enviar</button>
+                <button type="submit" class="form-button" onclick="sendForm()">Enviar</button>
             </form>
         </div>
     </main>

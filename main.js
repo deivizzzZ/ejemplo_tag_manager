@@ -6,7 +6,7 @@ function increaseCounter() {
 
 function sendClicks() {
     dataLayer.push({
-        // Estos datos se envían mediante un activador de clic en GTM
+        'event': 'clicks_sent',
         'clicks_number': document.getElementById("clicks-number").value
     });
 }
